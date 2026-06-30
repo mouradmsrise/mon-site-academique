@@ -1,9 +1,9 @@
 import { useLanguage } from "../context/LanguageContext";
-import { cvData } from "../data/cvData";
+import { useCvData } from "../context/CvDataContext";
 
 export default function Contact() {
   const { lang } = useLanguage();
-  const d = cvData[lang];
+  const d = useCvData()[lang];
 
   return (
     <section id="contact" className="bg-brand-700 text-white">

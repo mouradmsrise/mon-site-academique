@@ -1,9 +1,9 @@
 import { useLanguage } from "../context/LanguageContext";
-import { cvData } from "../data/cvData";
+import { useCvData } from "../context/CvDataContext";
 
 export default function Teaching() {
   const { lang } = useLanguage();
-  const d = cvData[lang];
+  const d = useCvData()[lang];
 
   return (
     <section id="teaching" className="max-w-6xl mx-auto px-4 sm:px-6 py-16">

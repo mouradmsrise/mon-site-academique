@@ -1,9 +1,9 @@
 import { useLanguage } from "../context/LanguageContext";
-import { cvData } from "../data/cvData";
+import { useCvData } from "../context/CvDataContext";
 
 export default function Committees() {
   const { lang } = useLanguage();
-  const d = cvData[lang];
+  const d = useCvData()[lang];
 
   return (
     <section className="bg-slate-50">

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { LanguageProvider } from "./context/LanguageContext";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -10,8 +11,25 @@ import Committees from "./components/Committees";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import AdminPage from "./admin/AdminPage";
+
+function useHash() {
+  const [hash, setHash] = useState(window.location.hash);
+  useEffect(() => {
+    const onChange = () => setHash(window.location.hash);
+    window.addEventListener("hashchange", onChange);
+    return () => window.removeEventListener("hashchange", onChange);
+  }, []);
+  return hash;
+}
 
 function App() {
+  const hash = useHash();
+
+  if (hash.startsWith("#admin")) {
+    return <AdminPage />;
+  }
+
   return (
     <LanguageProvider>
       <div className="min-h-screen font-sans text-slate-700">

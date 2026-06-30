@@ -1,5 +1,5 @@
 import { useLanguage } from "../context/LanguageContext";
-import { cvData } from "../data/cvData";
+import { useCvData } from "../context/CvDataContext";
 
 function PubItem({ pub }) {
   return (
@@ -30,7 +30,7 @@ function PubItem({ pub }) {
 
 export default function Publications() {
   const { lang } = useLanguage();
-  const d = cvData[lang];
+  const d = useCvData()[lang];
   const p = d.publications;
 
   return (

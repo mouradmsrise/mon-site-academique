@@ -1,10 +1,10 @@
 import { useLanguage } from "../context/LanguageContext";
-import { cvData } from "../data/cvData";
+import { useCvData } from "../context/CvDataContext";
 import portrait from "../assets/portrait.jpg";
 
 export default function Hero() {
   const { lang } = useLanguage();
-  const d = cvData[lang];
+  const d = useCvData()[lang];
 
   return (
     <section id="about" className="bg-gradient-to-b from-brand-50 to-white">

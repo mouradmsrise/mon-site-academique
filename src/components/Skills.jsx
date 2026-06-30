@@ -1,5 +1,5 @@
 import { useLanguage } from "../context/LanguageContext";
-import { cvData } from "../data/cvData";
+import { useCvData } from "../context/CvDataContext";
 
 function Pills({ items }) {
   return (
@@ -18,7 +18,7 @@ function Pills({ items }) {
 
 export default function Skills() {
   const { lang } = useLanguage();
-  const d = cvData[lang];
+  const d = useCvData()[lang];
 
   return (
     <section id="skills" className="max-w-6xl mx-auto px-4 sm:px-6 py-16">

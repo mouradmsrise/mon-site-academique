@@ -1,9 +1,9 @@
-import { cvData } from "../data/cvData";
+import { useCvData } from "../context/CvDataContext";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function Footer() {
   const { lang } = useLanguage();
-  const d = cvData[lang];
+  const d = useCvData()[lang];
 
   return (
     <footer className="bg-slate-900 text-slate-400 text-sm">

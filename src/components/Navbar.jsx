@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
-import { navLinks } from "../data/cvData";
+import { useNavLinksData } from "../context/CvDataContext";
 
 export default function Navbar() {
   const { lang, toggleLang } = useLanguage();
+  const navLinks = useNavLinksData();
   const [open, setOpen] = useState(false);
 
   const handleClick = (id) => {
