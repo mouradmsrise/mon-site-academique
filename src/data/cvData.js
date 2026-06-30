@@ -14,6 +14,7 @@ export const cvData = {
       { label: "Scopus", url: "https://www.scopus.com/pages/home#basic" },
       { label: "Google Scholar", url: "https://scholar.google.com/citations?user=IH39VZMAAAAJ&hl=fr&oi=ao" },
       { label: "ResearchGate", url: "https://www.researchgate.net/profile/Mourad-Haddioui" },
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/mourad-haddioui-006342123" },
     ],
     researchInterests: [
       "Traffic flow modeling",
@@ -257,6 +258,7 @@ export const cvData = {
       { label: "Scopus", url: "https://www.scopus.com/pages/home#basic" },
       { label: "Google Scholar", url: "https://scholar.google.com/citations?user=IH39VZMAAAAJ&hl=fr&oi=ao" },
       { label: "ResearchGate", url: "https://www.researchgate.net/profile/Mourad-Haddioui" },
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/mourad-haddioui-006342123" },
     ],
     researchInterests: [
       "Traffic flow modeling",
